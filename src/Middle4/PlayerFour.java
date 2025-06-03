@@ -1,8 +1,8 @@
 package Middle4;
 
 public class PlayerFour {
-    /*private*/ String name;
-    /*private*/ int score;
+    private String name;
+    private int score;
 
     public PlayerFour(String name) {
         this.name = name;
