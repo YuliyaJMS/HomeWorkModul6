@@ -14,22 +14,30 @@ public class Main {
         System.out.println("Введите второе число: ");
         int number2 = scanner.nextInt();
 
-        switch(choice.toLowerCase()) {
+        performOperation(choice, number1, number2, calculator);
+    }
+
+    private static void performOperation(String choice, int number1, int number2, Calculator calculator) {
+        switch (choice.toLowerCase()) {
             case "сложение":
-                System.out.println("Результат сложения " + calculator.add(number1, number2));
+                System.out.println("Результат сложения: " + calculator.add(number1, number2));
                 break;
             case "вычитание":
-                System.out.println("Результат вычитания " + calculator.subtract(number1, number2));
+                System.out.println("Результат вычитания: " + calculator.subtract(number1, number2));
                 break;
-            case  "умножение":
-                System.out.println("Результат умножения " + calculator.multiply(number1, number2));
+            case "умножение":
+                System.out.println("Результат умножения: " + calculator.multiply(number1, number2));
                 break;
             case "деление":
-                System.out.println("Результат деления " + calculator.division(number1, number2));
+                if (number2 != 0) {
+                    System.out.println("Результат деления: " + calculator.division(number1, number2));
+                } else {
+                    System.out.println("Ошибка: деление на ноль невозможно.");
+                }
                 break;
             default:
                 System.out.println("Неверный выбор действий");
                 break;
         }
-        }
     }
+}

@@ -5,13 +5,12 @@ import java.util.Random;
 public class GamePack {
     private PlayerPack player;
     private int sticks;
-    private final int initialSticks;
+    static final int INITIAL_STACKS = 20;
 
 
     public GamePack(PlayerPack player, int sticks) {
         this.player = player;
         this.sticks = sticks;
-        this.initialSticks = sticks;
     }
 
     public void startGame() {
@@ -53,7 +52,8 @@ public class GamePack {
         }
     }
 
+
     public void resetGame() {
-        this.sticks = initialSticks;
+       this.sticks = INITIAL_STACKS;
     }
 }

@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         PlayerPack player = new PlayerPack("Игрок", 1);
-        int initialSticks = 20;
 
-        GamePack game = new GamePack(player,initialSticks);
+        GamePack game = new GamePack(player, GamePack.INITIAL_STACKS);
 
             while (true) {
                 game.startGame();
